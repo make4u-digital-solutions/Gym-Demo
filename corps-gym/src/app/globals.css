@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #080808;
+    color: #ffffff;
+    font-family: var(--font-inter), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #F04435;
+    color: #ffffff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #080808;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F04435;
+  }
+}
+
+@layer components {
+  /* Angular chamfered clip-path button (signature CORPS shape) */
+  .btn-primary {
+    @apply bg-brand-red hover:bg-[#d63426] text-white font-display text-xl tracking-wider px-8 py-3.5 uppercase font-bold transition-all duration-200 inline-flex items-center gap-2;
+    clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 28px rgba(240, 68, 53, 0.45);
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-white/60 hover:bg-white/10 text-white font-display text-xl tracking-wider px-8 py-3 uppercase font-bold transition-all duration-200 inline-flex items-center gap-2;
+    clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
+  }
+
+  .btn-white {
+    @apply bg-white hover:bg-brand-red hover:text-white text-black font-display text-xl tracking-wider px-8 py-3.5 uppercase font-bold transition-all duration-200 inline-flex items-center gap-2;
+    clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
+  }
+
+  .btn-dark {
+    @apply bg-zinc-800 hover:bg-zinc-700 text-white font-display text-xl tracking-wider px-8 py-3 uppercase font-bold transition-all duration-200 inline-flex items-center gap-2;
+    clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
+  }
+
+  .clip-slant {
+    clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
+  }
+
+  .clip-corner {
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  }
+
+  .clip-corner-br {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+  }
+
+  .red-glow {
+    box-shadow: 0 0 45px -10px rgba(240, 68, 53, 0.4);
+  }
+
+  .noise-bg {
+    background-image: radial-gradient(circle at 50% 20%, rgba(240, 68, 53, 0.12) 0%, transparent 60%),
+                      radial-gradient(circle at 90% 70%, rgba(255, 148, 26, 0.08) 0%, transparent 50%);
+  }
+
+  .section-label {
+    @apply text-brand-red uppercase tracking-widest font-bold text-xs mb-2 inline-flex items-center gap-2;
+  }
+
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: currentColor;
+    border-radius: 50%;
+  }
+
+  .section-heading {
+    @apply font-display text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-white leading-none;
+  }
+
+  .card-bordered {
+    @apply bg-brand-surface border border-brand-border transition-colors duration-300;
+  }
+
+  .card-bordered:hover {
+    @apply border-brand-red;
+  }
+
+  /* Mobile menu overlay */
+  .mobile-menu-overlay {
+    @apply fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex flex-col;
+  }
+
+  /* Form inputs */
+  .form-input {
+    @apply w-full bg-[#101010] border border-brand-border text-white placeholder-zinc-600 px-4 py-3 text-sm focus:outline-none focus:border-brand-red transition-colors;
+  }
+
+  .form-input:focus {
+    box-shadow: inset 0 0 0 1px #F04435;
+  }
+}
+
+@layer utilities {
+  .text-gradient-fire {
+    background: linear-gradient(135deg, #F04435, #FF941A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gradient-fire {
+    border-image: linear-gradient(135deg, #F04435, #FF941A) 1;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

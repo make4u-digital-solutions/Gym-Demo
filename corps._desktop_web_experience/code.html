@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CORPS. | Built Like a Unit. Trained Like a Corps.</title>
+<!-- Google Fonts: Bebas Neue for display headers, Inter for athletic body/system typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=Teko:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 CDN with official plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#080808',
+              charcoal: '#111111',
+              card: '#161616',
+              border: '#262626',
+              accentRed: '#F04435',
+              accentOrange: '#FF941A',
+              muted: '#8E8E93',
+              glow: 'rgba(240, 68, 53, 0.25)',
+            }
+          },
+          fontFamily: {
+            display: ['Bebas Neue', 'sans-serif'],
+            athletic: ['Teko', 'sans-serif'],
+            sans: ['Inter', 'sans-serif']
+          },
+          clipPath: {
+            slant: 'polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%)',
+            badge: 'polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles: Geometric Cut Buttons & Tactical Overlays -->
+<style data-purpose="custom-geometry">
+    .clip-slant {
+      clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
+    }
+    .clip-corner {
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    }
+    .clip-quote {
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+    }
+    .noise-bg {
+      background-image: radial-gradient(circle at 50% 20%, rgba(240, 68, 53, 0.12) 0%, transparent 60%),
+                        radial-gradient(circle at 90% 70%, rgba(255, 148, 26, 0.08) 0%, transparent 50%);
+    }
+    .red-glow {
+      box-shadow: 0 0 45px -10px rgba(240, 68, 53, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-[#080808] text-white font-sans antialiased selection:bg-[#F04435] selection:text-white overflow-x-hidden">
+<!-- BEGIN: AnnouncementBar -->
+<aside class="bg-[#99140C] bg-gradient-to-r from-[#99140C] via-[#DC2626] to-[#99140C] py-2 px-4 text-center border-b border-red-900/60 sticky top-0 z-50" data-purpose="top-announcement-banner">
+<div class="max-w-7xl mx-auto flex items-center justify-center gap-2 text-xs md:text-sm tracking-wider font-semibold uppercase text-white">
+<span>🔥 GRAND OPENING OFFER — 30% OFF ALL MEMBERSHIPS. LIMITED SPOTS AVAILABLE.</span>
+<a class="underline underline-offset-4 decoration-white/70 hover:text-amber-200 transition-colors ml-1 font-bold" href="#pricing">JOIN US TODAY!</a>
+</div>
+</aside>
+<!-- END: AnnouncementBar -->
+<!-- BEGIN: MainHeader -->
+<header class="relative z-40 bg-[#080808]/90 backdrop-blur-md border-b border-[#222222]" data-purpose="site-header">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<!-- Logo Unit -->
+<a aria-label="CORPS Home" class="flex items-center gap-1 group" href="#">
+<span class="font-display text-4xl tracking-wider text-[#F04435] group-hover:text-[#FF941A] transition-colors">COR</span>
+<span class="font-display text-4xl tracking-wider text-white">PS.</span>
+</a>
+<!-- Desktop Navigation Menu -->
+<nav class="hidden md:flex items-center gap-8 lg:gap-10" data-purpose="desktop-nav">
+<a class="text-sm tracking-widest font-semibold uppercase text-zinc-300 hover:text-[#F04435] transition-colors" href="#about">ABOUT</a>
+<a class="text-sm tracking-widest font-semibold uppercase text-zinc-300 hover:text-[#F04435] transition-colors" href="#programs">PROGRAMS</a>
+<a class="text-sm tracking-widest font-semibold uppercase text-zinc-300 hover:text-[#F04435] transition-colors" href="#pricing">PRICING</a>
+<a class="text-sm tracking-widest font-semibold uppercase text-zinc-300 hover:text-[#F04435] transition-colors" href="#trainers">TRAINERS</a>
+<a class="text-sm tracking-widest font-semibold uppercase text-zinc-300 hover:text-[#F04435] transition-colors" href="#transformations">TRANSFORMATIONS</a>
+<a class="text-sm tracking-widest font-semibold uppercase text-zinc-300 hover:text-[#F04435] transition-colors" href="#location">CONTACT</a>
+</nav>
+<!-- Member Actions -->
+<div class="flex items-center gap-5">
+<a class="hidden sm:inline-block text-xs uppercase tracking-widest font-semibold text-zinc-400 hover:text-white transition-colors" href="#pricing">
+          Cadre Login
+        </a>
+<a class="clip-slant bg-white hover:bg-[#F04435] text-black hover:text-white font-display text-xl tracking-wider px-7 py-2.5 transition-all duration-200 uppercase font-bold shadow-lg" href="#pricing">
+          JOIN US TODAY
+        </a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative min-h-[780px] lg:h-[840px] w-full overflow-hidden border-b border-[#222222] noise-bg" data-purpose="hero-banner">
+<!-- Background Hero Visual Container matching https://lh3.googleusercontent.com/aida-public/AB6AXuA_FIcXmX5a3oIvsE0nMQb7c2i8mgsXm4FI8PuRmBoaRMjeT49Grn9UdHl2rsrKVJYWk3urnZTA6plz3o53wyPbBv9QJQMudIuj4ca7QpqQjsk5ubGVcLSIvlHU9P4HQJCFStvj-dnwZUF98JQyKPcb-36ZZeSZ3laUE-OulPsOUoLXwC4eL9mVvZw5XMvVkK3-0i1wuCSUskmJDGJjEj7sB-Phlsk4sh36PETp2C1yH3IcgxPKvVLEIu_MW5XyO_8Bvvg -->
+<div class="absolute inset-0 z-0">
+<img alt="Three elite muscular bodybuilders training with red rim lighting and heavy gym iron" class="w-full h-full object-cover object-center lg:object-right-top brightness-90 filter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_FIcXmX5a3oIvsE0nMQb7c2i8mgsXm4FI8PuRmBoaRMjeT49Grn9UdHl2rsrKVJYWk3urnZTA6plz3o53wyPbBv9QJQMudIuj4ca7QpqQjsk5ubGVcLSIvlHU9P4HQJCFStvj-dnwZUF98JQyKPcb-36ZZeSZ3laUE-OulPsOUoLXwC4eL9mVvZw5XMvVkK3-0i1wuCSUskmJDGJjEj7sB-Phlsk4sh36PETp2C1yH3IcgxPKvVLEIu_MW5XyO_8Bvvg"/>
+<!-- Cinematic Vignette and Dark Readability Gradients -->
+<div class="absolute inset-0 bg-gradient-to-r from-[#080808] via-[#080808]/85 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent"></div>
+</div>
+<!-- Hero Content Overlay Layer -->
+<div class="relative z-10 max-w-[1440px] h-full mx-auto px-6 lg:px-12 flex flex-col justify-between py-12 lg:py-16">
+<!-- Top Badging: Enrolled Members & Social Proof -->
+<div class="flex items-center gap-4 pt-2">
+<!-- Overlapping Avatar Cluster -->
+<div aria-hidden="true" class="flex -space-x-3 items-center">
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-black bg-zinc-700 text-xs font-bold text-white uppercase overflow-hidden">
+<span class="bg-gradient-to-tr from-amber-600 to-orange-400 w-full h-full flex items-center justify-center">MK</span>
+</span>
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-black bg-zinc-600 text-xs font-bold text-white uppercase overflow-hidden">
+<span class="bg-gradient-to-tr from-red-700 to-rose-400 w-full h-full flex items-center justify-center">JT</span>
+</span>
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-black bg-zinc-800 text-xs font-bold text-white uppercase overflow-hidden">
+<span class="bg-gradient-to-tr from-stone-600 to-zinc-400 w-full h-full flex items-center justify-center">AL</span>
+</span>
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-black bg-zinc-700 text-xs font-bold text-white uppercase overflow-hidden">
+<span class="bg-gradient-to-tr from-neutral-800 to-red-600 w-full h-full flex items-center justify-center">SR</span>
+</span>
+</div>
+<div class="text-left">
+<p class="text-xs uppercase tracking-widest font-black text-white">120K+ ATHLETES ENROLLED</p>
+<p class="text-[11px] font-bold tracking-wider text-[#FF941A]">★★★★★ 4.9/5 CADRE ACCREDITED</p>
+</div>
+</div>
+<!-- Main Headline & Subtitle Block -->
+<div class="max-w-2xl mt-8 lg:mt-0">
+<h1 class="text-6xl sm:text-7xl lg:text-8xl tracking-tight uppercase font-display leading-[0.92] text-white">
+          BUILT LIKE A UNIT.<br/>
+<span class="text-[#FF941A]">TRAINED LIKE A CORPS.</span>
+</h1>
+<p class="mt-6 text-zinc-300 text-base sm:text-lg max-w-xl font-normal leading-relaxed">
+          At Corps, we forge far more than raw muscle. We build unwavering discipline, battlefield resilience, and unrelenting confidence. Welcome to the elite sanctum.
+        </p>
+<!-- Hero Dual Action Buttons -->
+<div class="mt-8 sm:mt-10 flex flex-wrap items-center gap-4">
+<a class="clip-slant bg-[#F04435] hover:bg-[#d63426] text-white font-display text-2xl tracking-wider px-8 py-3.5 transition-all duration-200 uppercase font-bold shadow-lg flex items-center gap-2" href="#pricing">
+            JOIN US TODAY <span>⚡</span>
+</a>
+<a class="clip-slant bg-transparent hover:bg-white/10 text-white border-2 border-white/60 font-display text-2xl tracking-wider px-8 py-3 transition-all duration-200 uppercase font-bold" href="#programs">
+            JOIN FREE TRIAL <span>→</span>
+</a>
+</div>
+</div>
+<!-- Bottom Floating Quote Card (Right-aligned over hero backdrop) -->
+<div class="flex justify-end mt-8 lg:mt-0">
+<div class="clip-quote bg-black/85 backdrop-blur-md border border-[#333333] p-5 sm:p-6 max-w-md w-full red-glow relative" data-purpose="hero-quote-card">
+<!-- Stylized Quotation Mark -->
+<div class="font-display text-4xl text-[#F04435] leading-none mb-2">“</div>
+<p class="text-xs sm:text-sm uppercase tracking-wide font-bold text-zinc-200 leading-snug">
+            “I CAME HERE TO BUILD MUSCLE, BUT I <span class="text-[#F04435]">ENDED UP FORGING MENTAL TOUGHNESS</span> THAT CHANGED EVERY SINGLE HOUR OF MY LIFE.”
+          </p>
+<div class="mt-4 flex items-center justify-between border-t border-zinc-800 pt-3">
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-[#F04435] flex items-center justify-center text-[10px] font-bold text-white">LH</div>
+<span class="text-xs font-bold uppercase tracking-wider text-zinc-400">Lucas H. • Heavy Division</span>
+</div>
+<!-- Slider Dots Indicator -->
+<div aria-hidden="true" class="flex items-center gap-1.5">
+<span class="w-2 h-1 bg-[#F04435]"></span>
+<span class="w-2 h-1 bg-zinc-600"></span>
+<span class="w-2 h-1 bg-zinc-600"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: StatsStrip -->
+<section class="bg-[#111111] border-b border-[#222222] py-8" data-purpose="metrics-strip">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+<div class="pt-4 md:pt-0">
+<p class="font-display text-4xl lg:text-5xl text-white tracking-wide">120K+</p>
+<p class="text-xs font-semibold uppercase tracking-widest text-[#FF941A] mt-1">GLOBAL CADRE ENROLLED</p>
+</div>
+<div class="pt-4 md:pt-0">
+<p class="font-display text-4xl lg:text-5xl text-white tracking-wide">15+ YEARS</p>
+<p class="text-xs font-semibold uppercase tracking-widest text-zinc-400 mt-1">PROVEN HYPERTROPHY MASTERY</p>
+</div>
+<div class="pt-4 md:pt-0">
+<p class="font-display text-4xl lg:text-5xl text-white tracking-wide">40+ COACHES</p>
+<p class="text-xs font-semibold uppercase tracking-widest text-[#FF941A] mt-1">MASTER BIOMECHANICS STAFF</p>
+</div>
+<div class="pt-4 md:pt-0">
+<p class="font-display text-4xl lg:text-5xl text-white tracking-wide">24 / 7 / 365</p>
+<p class="text-xs font-semibold uppercase tracking-widest text-zinc-400 mt-1">UNBROKEN BIOMETRIC ACCESS</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: StatsStrip -->
+<!-- BEGIN: DoctrineSection -->
+<section class="py-24 bg-[#080808] border-b border-[#222222]" data-purpose="doctrine-about-section" id="about">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Visual Column -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-none border border-[#333333] overflow-hidden bg-zinc-900 group">
+<!-- Athletic Iron Visual Placeholder -->
+<img alt="Heavy duty steel deadlift platforms and cast iron plates in Corps facility" class="w-full h-[520px] object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFWgNa_ASgGt0QPXAgDqvwycJ7__VgQmnpq9jgGPQrNOWANkG2--Sfg_fYNonYdDClK8AdFdMEzteXMYmpiztSqyQ5ZlgbDV3cfy9kTeYLuOXcpnPwyjut0WtL7hfV0orrJ1vc5s3Ei6gOSABzuJeuA1_P7AkSuA6dt5QmFSj_D2kI7T6bQeIWjCJgHcyuLbb6LjZpxAUdJBC2qEARJOMNm_nwPHBx92TB__ZXIkVzrVVEQPGX_g9bDA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-xs font-bold uppercase tracking-widest text-[#FF941A] block mb-1">STANDARD OPERATING PROTOCOL</span>
+<p class="font-display text-3xl text-white uppercase tracking-wider">NO COMPROMISE. NO EXCUSES.</p>
+</div>
+</div>
+<!-- Decorative Red Accent Tag -->
+<div class="absolute -top-3 -right-3 w-16 h-16 border-t-2 border-r-2 border-[#F04435] pointer-events-none"></div>
+</div>
+<!-- Content Column -->
+<div class="lg:col-span-7">
+<div class="inline-block bg-[#F04435]/10 border border-[#F04435]/40 px-3.5 py-1 text-xs uppercase tracking-widest font-bold text-[#F04435] mb-4">
+            THE CORPS DOCTRINE
+          </div>
+<h2 class="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-white leading-none">
+            MORE THAN A GYM.<br/>
+<span class="text-zinc-400">AN UNCOMPROMISING STANDARD.</span>
+</h2>
+<p class="mt-6 text-zinc-300 text-base leading-relaxed">
+            Most fitness facilities operate as passive rental spaces for machinery. Corps is configured as a high-output athletic foundry. We have engineered every single variable—from calibrated barbell knurling and ambient red spectrum lighting to our unyielding cadence culture—to eliminate distraction and ignite muscular growth.
+          </p>
+<!-- 3 Pillars Grid -->
+<div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-[#141414] border border-[#262626] p-5 hover:border-[#F04435] transition-colors">
+<div class="w-10 h-10 bg-[#F04435]/20 text-[#F04435] font-display text-2xl flex items-center justify-center font-bold mb-3">
+                01
+              </div>
+<h3 class="font-display text-xl tracking-wider text-white uppercase">PRECISION BIOMECHANICS</h3>
+<p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+                Custom lever-arms, calibrated plate-loaded stations, and isolated cable towers engineered for maximum muscular tension.
+              </p>
+</div>
+<div class="bg-[#141414] border border-[#262626] p-5 hover:border-[#FF941A] transition-colors">
+<div class="w-10 h-10 bg-[#FF941A]/20 text-[#FF941A] font-display text-2xl flex items-center justify-center font-bold mb-3">
+                02
+              </div>
+<h3 class="font-display text-xl tracking-wider text-white uppercase">THE CADRE CULTURE</h3>
+<p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+                Surround yourself with lifters who treat every single repetition as an unequivocal declaration of discipline.
+              </p>
+</div>
+<div class="bg-[#141414] border border-[#262626] p-5 hover:border-[#F04435] transition-colors">
+<div class="w-10 h-10 bg-[#F04435]/20 text-[#F04435] font-display text-2xl flex items-center justify-center font-bold mb-3">
+                03
+              </div>
+<h3 class="font-display text-xl tracking-wider text-white uppercase">THERMAL RECOVERY</h3>
+<p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+                Private infrared cedar saunas, 4°C cold plunge tubs, and percussive therapy suites for unbroken physical restoration.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: DoctrineSection -->
+<!-- BEGIN: ProgramsSection -->
+<section class="py-24 bg-[#111111] border-b border-[#222222]" data-purpose="systematic-programs-grid" id="programs">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+<div>
+<span class="text-[#F04435] uppercase tracking-widest font-bold text-xs">SYSTEMATIC TRAINING PATHWAYS</span>
+<h2 class="text-4xl sm:text-6xl font-display uppercase tracking-tight text-white mt-2">
+            FIND YOUR <span class="text-[#FF941A]">STRENGTH.</span>
+</h2>
+</div>
+<p class="text-zinc-400 text-sm max-w-md">
+          Structured, periodized programming designed to break plateaus and trigger aggressive neurological and hypertrophic adaptations.
+        </p>
+</div>
+<!-- Programs 4-Column Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Track 01 -->
+<article class="bg-[#181818] border border-[#262626] group hover:border-[#F04435] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div>
+<div class="relative h-56 overflow-hidden">
+<img alt="Bodybuilder dumbbell bench press" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXAWDbqlyz6cMz1WGfMZocKiiSzcGwXaul09suNMsK5r18h7Eu_pivU5ocA1a_FOuOr47eEDqkBrO1RvAG0QWS4Bw08HJsVgrZB32DOnLSN51uwqOOLZxsiWkBG3FEq3dX50mbOuojukrYg9arymGCNV8NBBF-tk27jaN3-Q0RRC9bOrtBtHfY029YPsNd5KKp5TUPa3OvHLmNzmK6wL1E4gbmvhIlI2j360EOCmAsWRdcDWHQFcQAkQ"/>
+<span class="absolute top-3 left-3 bg-black/80 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-white border border-zinc-700">TRACK 01</span>
+</div>
+<div class="p-6">
+<p class="text-xs font-bold text-[#FF941A] uppercase tracking-wider">5 DAYS / WK • 75 MIN</p>
+<h3 class="font-display text-2xl text-white uppercase tracking-wide mt-2">HEAVY HYPERTROPHY</h3>
+<p class="text-xs text-zinc-400 mt-3 leading-relaxed">
+                Mechanical tension optimization, eccentric overload control, and calibrated volume splits for maximum muscle cross-sectional area.
+              </p>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="w-full inline-flex items-center justify-between text-xs uppercase tracking-widest font-bold text-white group-hover:text-[#F04435] transition-colors border-t border-zinc-800 pt-4" href="#pricing">
+<span>EXPLORE PROTOCOL</span>
+<span>→</span>
+</a>
+</div>
+</article>
+<!-- Track 02 -->
+<article class="bg-[#181818] border border-[#262626] group hover:border-[#F04435] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div>
+<div class="relative h-56 overflow-hidden">
+<img alt="Heavy barbell deadlift lockout" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXeD3DVtrbcxpflLdBFor0gK9GuiziXh7OGr53s5H5pgZ--8-p363RS2rEnNrcB1TVzMR0JZ4VfbBBildt6VJaITZWz2iJ6BBo1EYaIF_SDwS3T7ydH--ujN2VSn67e8ScPqlWtBsDmHM3tH0oSOxyyef759XY2HjPalXHaYg_RsciI2hEXd0uZ35VGG5t4oohaOQ2sxBk3G2QxlnDAaTqpMMb_6IIuNRif549-sDu3mxcdI-Tk-cFwA"/>
+<span class="absolute top-3 left-3 bg-black/80 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-white border border-zinc-700">TRACK 02</span>
+</div>
+<div class="p-6">
+<p class="text-xs font-bold text-[#FF941A] uppercase tracking-wider">4 DAYS / WK • 90 MIN</p>
+<h3 class="font-display text-2xl text-white uppercase tracking-wide mt-2">TACTICAL POWERLIFTING</h3>
+<p class="text-xs text-zinc-400 mt-3 leading-relaxed">
+                Raw concentric force generation targeting the Big Three: Squat, Bench, and Deadlift. Master rate of force development and CNS adaptation.
+              </p>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="w-full inline-flex items-center justify-between text-xs uppercase tracking-widest font-bold text-white group-hover:text-[#F04435] transition-colors border-t border-zinc-800 pt-4" href="#pricing">
+<span>EXPLORE PROTOCOL</span>
+<span>→</span>
+</a>
+</div>
+</article>
+<!-- Track 03 -->
+<article class="bg-[#181818] border border-[#262626] group hover:border-[#F04435] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div>
+<div class="relative h-56 overflow-hidden">
+<img alt="Athlete executing high intensity heavy sled push" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX4g9aRE8S2IQ5zNB6qI6VCGtFTipvDI_kJs1uLugafHBGc4R-oyaWVrATczARcoLyVyIeRF8_Fm0yqzqS0AL5qybFdj2yRUsp89WBZ6UsczwbRIOtldOC5sDjccQSvw7M6gGGUrXU9ttVmmeV--jMG0KpVl-3C11aFCQPzuUadvywpvO3iF9J77JnVkgpuub1xxkCvyvnNobeivUTHTjEbYaUbNJc4e2ABtoNtW9cFX_TV4In94PfDA"/>
+<span class="absolute top-3 left-3 bg-black/80 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-white border border-zinc-700">TRACK 03</span>
+</div>
+<div class="p-6">
+<p class="text-xs font-bold text-[#FF941A] uppercase tracking-wider">5 DAYS / WK • 45 MIN</p>
+<h3 class="font-display text-2xl text-white uppercase tracking-wide mt-2">METABOLIC WARFARE</h3>
+<p class="text-xs text-zinc-400 mt-3 leading-relaxed">
+                High-density lactate threshold intervals, heavy sled pushing, skiergs, and kettlebell ballistic complexes to maximize VO2 and leanness.
+              </p>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="w-full inline-flex items-center justify-between text-xs uppercase tracking-widest font-bold text-white group-hover:text-[#F04435] transition-colors border-t border-zinc-800 pt-4" href="#pricing">
+<span>EXPLORE PROTOCOL</span>
+<span>→</span>
+</a>
+</div>
+</article>
+<!-- Track 04 -->
+<article class="bg-[#181818] border border-[#262626] group hover:border-[#F04435] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div>
+<div class="relative h-56 overflow-hidden">
+<img alt="Head coach supervising lifter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-_t1LYkUbSRzmPuf6agQtSjJIKyT8MHEdJ1BI7issL0mUG82V3UVMAapvXpCNo5Rrh8PwqUZKorRNSyjsF2f70_Zu764QXcr_XQte_UV8eoznDm3fXL8ygyqttijSA0bti8jRwLmNnEKubcVtDOiFJiti_Wlls0Ceak_eylih-mfDoOBqgLYyBpD0VLwqVK0xqP456E455tMME6zFLRzTv_Z6C3eFtRn9wWtVyKT-ANl3X1G3pn2NVw"/>
+<span class="absolute top-3 left-3 bg-[#F04435] px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-white">ELITE CADRE</span>
+</div>
+<div class="p-6">
+<p class="text-xs font-bold text-[#FF941A] uppercase tracking-wider">CUSTOM FREQUENCY</p>
+<h3 class="font-display text-2xl text-white uppercase tracking-wide mt-2">1-ON-1 CADRE COACHING</h3>
+<p class="text-xs text-zinc-400 mt-3 leading-relaxed">
+                Bespoke periodization, continuous video kinematic review, personalized micronutrient scheduling, and direct 24/7 accountability.
+              </p>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="w-full inline-flex items-center justify-between text-xs uppercase tracking-widest font-bold text-white group-hover:text-[#F04435] transition-colors border-t border-zinc-800 pt-4" href="#pricing">
+<span>EXPLORE PROTOCOL</span>
+<span>→</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: ProgramsSection -->
+<!-- BEGIN: TrainersSection -->
+<section class="py-24 bg-[#080808] border-b border-[#222222]" data-purpose="coaches-grid" id="trainers">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-[#F04435] uppercase tracking-widest font-bold text-xs">ELITE COMMAND STAFF</span>
+<h2 class="text-4xl sm:text-6xl font-display uppercase tracking-tight text-white mt-2">
+          TRAIN WITH THE <span class="text-[#FF941A]">BEST.</span>
+</h2>
+<p class="text-zinc-400 text-sm mt-3">
+          Our mentors are decorated competitive lifters, military physical training specialists, and certified exercise physiologists.
+        </p>
+</div>
+<!-- Trainers 4 Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Trainer 1 -->
+<div class="bg-[#141414] border border-[#222222] p-4 group hover:border-[#F04435] transition-colors">
+<div class="overflow-hidden relative h-80 mb-4 bg-zinc-900">
+<img alt="Marcus Vance head strength coach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhhaZ-usftM5a6uWGhFMBYs3sSmf4EZcqWIj1kiP4mPKo59R5-RGJhUOwzgHZ6QGFqzQw-Zb_2S_2ktZUyvxsaIFY4Dfd2Ggg2_YjyiyusPVhbRJW6-1dkF9S7sSxOw8st81QTTPtvwHZS7BdGVBYYCVo4wfOM-tJvYj_CNBMPpobUBchNYbf4zxFTut1oQlWNmw0JgsKQEKUeZ2QoxM_iF4RTcAk0Qp1kUa9JvaUZ-tsam3RivEwNCQ"/>
+<div class="absolute bottom-2 left-2 bg-black/80 px-2 py-0.5 text-[10px] font-bold text-[#FF941A] uppercase tracking-wider">
+              12 YRS COACHING
+            </div>
+</div>
+<h3 class="font-display text-2xl text-white uppercase tracking-wider">MARCUS VANCE</h3>
+<p class="text-xs uppercase font-bold text-[#F04435] tracking-wider mt-1">Head Strength • Ex-SpecOps PT</p>
+<p class="text-xs text-zinc-400 mt-2">Specializes in absolute strength development and heavy compound mechanics.</p>
+</div>
+<!-- Trainer 2 -->
+<div class="bg-[#141414] border border-[#222222] p-4 group hover:border-[#FF941A] transition-colors">
+<div class="overflow-hidden relative h-80 mb-4 bg-zinc-900">
+<img alt="Elena Rostova hypertrophy specialist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpjElrzZpWGuBzH4BcySfyyT4ixOSLnXv0UyFlcfIOVL-Qg53YRdcTfwQ7E80r-S_VaLjs1WxANglw0adN-BjVOj_32MY5gbMmnYoP3a-i74rTk5hNfGjk0ADECyEQwQt6xRY5_dwK1A_WY4Cdx-gCIuTAoNDcYE8rfOnxeODfA3QVZlPEhP-mwkfZwLqtYlruOY3oE45hAYSt6vsEKmr6Z06OnvqGNTMMeVN1Ixj5Zp4ScgckMlWs_Q"/>
+<div class="absolute bottom-2 left-2 bg-black/80 px-2 py-0.5 text-[10px] font-bold text-[#FF941A] uppercase tracking-wider">
+              9 YRS COACHING
+            </div>
+</div>
+<h3 class="font-display text-2xl text-white uppercase tracking-wider">ELENA ROSTOVA</h3>
+<p class="text-xs uppercase font-bold text-[#FF941A] tracking-wider mt-1">Biomechanics &amp; Hypertrophy</p>
+<p class="text-xs text-zinc-400 mt-2">Expert in muscular hypertrophy, lever analysis, and injury mitigation.</p>
+</div>
+<!-- Trainer 3 -->
+<div class="bg-[#141414] border border-[#222222] p-4 group hover:border-[#F04435] transition-colors">
+<div class="overflow-hidden relative h-80 mb-4 bg-zinc-900">
+<img alt="David Chen Olympic weightlifting specialist" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmHDzxJX-YA-EO5x0P5h-EcaiEi9WuDbwV8J45Iw1j6MRzBXe_o0h_m9JiORjFvnVMVamrZnPjUAgzmFfZiinFyRwJWODy_WTFC4Xn0GUe-ig-Xrhov9hiI6LfMO6Z22H_Z8J34FaK8bp-o1T6_V4xvI4JM1Xr1r4liKuvTylQxOcDTExl6HbUYcTSVG3AfDJPwUEiH7NfQvosKXtun5gl-LAhG0jHaIiLGQKMwkM-qAQlFZNzzjJJkg"/>
+<div class="absolute bottom-2 left-2 bg-black/80 px-2 py-0.5 text-[10px] font-bold text-[#FF941A] uppercase tracking-wider">
+              14 YRS COACHING
+            </div>
+</div>
+<h3 class="font-display text-2xl text-white uppercase tracking-wider">DAVID CHEN</h3>
+<p class="text-xs uppercase font-bold text-[#F04435] tracking-wider mt-1">Olympic Lifting Lead</p>
+<p class="text-xs text-zinc-400 mt-2">National powerlifter focused on explosive triple extension and bar trajectory.</p>
+</div>
+<!-- Trainer 4 -->
+<div class="bg-[#141414] border border-[#222222] p-4 group hover:border-[#FF941A] transition-colors">
+<div class="overflow-hidden relative h-80 mb-4 bg-zinc-900">
+<img alt="Sarah Jenkins conditioning coordinator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxjuzorIQ65dMIkJIcemE1yDjYML4genjqzm36knzSKqIOFqaT2yhLwDKiYFTpagpaK-ixnrGHqUBt-SciSBRIilFyuQYucIwNR_juPeQ1Kf2M-GzarMJ40JHOJGeVWOT2P75TYmSlQmaqNUr945jJ5fxVe11KEhXhQiUoMSv74S_J8cOdeGnFMoNTPZSrDgb51AkyO3O821yFelZd_Oftg2qvLbseMTUyoVwdKYO8KG5YaYC1v8AO7w"/>
+<div class="absolute bottom-2 left-2 bg-black/80 px-2 py-0.5 text-[10px] font-bold text-[#FF941A] uppercase tracking-wider">
+              8 YRS COACHING
+            </div>
+</div>
+<h3 class="font-display text-2xl text-white uppercase tracking-wider">SARAH JENKINS</h3>
+<p class="text-xs uppercase font-bold text-[#FF941A] tracking-wider mt-1">Metabolic Performance</p>
+<p class="text-xs text-zinc-400 mt-2">Directs high-density interval warfare, metabolic output, and active recovery.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TrainersSection -->
+<!-- BEGIN: PricingSection -->
+<section class="py-24 bg-[#111111] border-b border-[#222222] noise-bg" data-purpose="membership-pricing-tiers" id="pricing">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-[#F04435] uppercase tracking-widest font-bold text-xs">UNCOMPROMISING COMMITMENT</span>
+<h2 class="text-4xl sm:text-6xl font-display uppercase tracking-tight text-white mt-2">
+          YOUR NEXT LEVEL <span class="text-[#FF941A]">STARTS HERE.</span>
+</h2>
+<p class="text-zinc-400 text-sm mt-3">
+          Select your level of initiation. All tiers grant unrestricted access to our calibrated free weights and heavy iron sanctum.
+        </p>
+</div>
+<!-- 3 Tier Pricing Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+<!-- Tier 1: STARTER -->
+<div class="bg-[#161616] border border-[#2a2a2a] p-8 flex flex-col justify-between hover:border-zinc-500 transition-colors">
+<div>
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-display text-3xl uppercase tracking-wider text-white">STARTER</h3>
+<span class="text-xs font-bold uppercase tracking-widest text-zinc-400 bg-zinc-800 px-3 py-1">TIER 01</span>
+</div>
+<p class="text-xs text-zinc-400 mb-6">Foundational access for self-directed athletes focused on basic compound execution.</p>
+<div class="mb-8 pb-6 border-b border-zinc-800">
+<div class="flex items-baseline gap-1">
+<span class="font-display text-5xl text-white tracking-tight">₹999</span>
+<span class="text-xs uppercase font-bold tracking-wider text-zinc-400">/ MONTH</span>
+</div>
+<p class="text-[11px] text-zinc-500 mt-1">Billed monthly • Cancel anytime</p>
+</div>
+<!-- Features -->
+<ul class="space-y-3.5 text-xs text-zinc-300 mb-8">
+<li class="flex items-center gap-3">
+<span class="text-[#F04435] font-bold">✓</span>
+<span>Unrestricted Gym Floor Access (05:00 - 23:00)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="text-[#F04435] font-bold">✓</span>
+<span>Calibrated Free-Weight &amp; Plate Access</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="text-[#F04435] font-bold">✓</span>
+<span>Full Locker Room &amp; Shower Access</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="text-[#F04435] font-bold">✓</span>
+<span>CORPS Digital Performance Companion App</span>
+</li>
+<li class="flex items-center gap-3 text-zinc-600 line-through">
+<span>✕</span>
+<span>24/7/365 Unrestricted Keycard Access</span>
+</li>
+<li class="flex items-center gap-3 text-zinc-600 line-through">
+<span>✕</span>
+<span>Infrared Sauna &amp; Cold Plunge Pass</span>
+</li>
+</ul>
+</div>
+<a class="clip-slant w-full text-center bg-zinc-800 hover:bg-zinc-700 text-white font-display text-xl tracking-wider py-3 uppercase font-bold transition-colors" href="#">
+            SELECT STARTER
+          </a>
+</div>
+<!-- Tier 2: PRO COMBAT (FEATURED) -->
+<div class="bg-[#181818] border-2 border-[#F04435] p-8 flex flex-col justify-between relative red-glow transform lg:-translate-y-2">
+<!-- Featured Badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#F04435] text-white font-bold text-[10px] tracking-widest uppercase px-4 py-1 clip-badge">
+            MOST RECRUITED TIER
+          </div>
+<div>
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-display text-3xl uppercase tracking-wider text-white">PRO COMBAT</h3>
+<span class="text-xs font-bold uppercase tracking-widest text-[#F04435] bg-[#F04435]/10 px-3 py-1 border border-[#F04435]/30">TIER 02</span>
+</div>
+<p class="text-xs text-zinc-400 mb-6">Complete thermal restoration and 24/7 uninterrupted iron access.</p>
+<div class="mb-8 pb-6 border-b border-zinc-800">
+<div class="flex items-baseline gap-1">
+<span class="font-display text-5xl text-[#F04435] tracking-tight">₹1,999</span>
+<span class="text-xs uppercase font-bold tracking-wider text-zinc-400">/ MONTH</span>
+</div>
+<p class="text-[11px] text-zinc-500 mt-1">Includes all Starter perks + full thermal suite</p>
+</div>
+<!-- Features -->
+<ul class="space-y-3.5 text-xs text-zinc-200 mb-8">
+<li class="flex items-center gap-3">
+<span class="text-[#FF941A] font-bold">✓</span>
+<span class="font-semibold text-white">24/7/365 Biometric Keycard Access</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="text-[#FF941A] font-bold">✓</span>
+<span>Infrared Cedar Sauna &amp; 4°C Cold Plunge</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="text-[#FF941A] font-bold">✓</span>
+<span>All Group Warfare Conditioning Sessions</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="text-[#FF941A] font-bold">✓</span>
+<span>1 Monthly Biometric InBody Body Composition Scan</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="text-[#FF941A] font-bold">✓</span>
+<span>CORPS Performance Barbell Towel &amp; Shaker</span>
+</li>
+</ul>
+</div>
+<a class="clip-slant w-full text-center bg-[#F04435] hover:bg-[#d63426] text-white font-display text-2xl tracking-wider py-3.5 uppercase font-bold transition-all shadow-lg" href="#">
+            CLAIM PRO MEMBERSHIP ➔
+          </a>
+</div>
+<!-- Tier 3: ELITE COMMAND -->
+<div class="bg-[#161616] border border-[#2a2a2a] p-8 flex flex-col justify-between hover:border-zinc-500 transition-colors">
+<div>
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-display text-3xl uppercase tracking-wider text-white">ELITE COMMAND</h3>
+<span class="text-xs font-bold uppercase tracking-widest text-[#FF941A] bg-[#FF941A]/10 px-3 py-1">TIER 03</span>
+</div>
+<p class="text-xs text-zinc-400 mb-6">Unrestricted personal coaching, dedicated locker, and nutrient support.</p>
+<div class="mb-8 pb-6 border-b border-zinc-800">
+<div class="flex items-baseline gap-1">
+<span class="font-display text-5xl text-white tracking-tight">₹3,499</span>
+<span class="text-xs uppercase font-bold tracking-wider text-zinc-400">/ MONTH</span>
+</div>
+<p class="text-[11px] text-zinc-500 mt-1">Full-spectrum athletic command privileges</p>
+</div>
+<!-- Features -->
+<ul class="space-y-3.5 text-xs text-zinc-300 mb-8">
+<li class="flex items-center gap-3">
+<span class="text-[#F04435] font-bold">✓</span>
+<span class="font-semibold text-white">Everything included in Pro Combat</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="text-[#F04435] font-bold">✓</span>
+<span>Dedicated 1-on-1 Master Cadre Coach</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="text-[#F04435] font-bold">✓</span>
+<span>Personal VIP Reserved Locker &amp; Daily Laundry</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="text-[#F04435] font-bold">✓</span>
+<span>Custom Macronutrient &amp; Supplement Protocol</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="text-[#F04435] font-bold">✓</span>
+<span>Unlimited Complimentary Guest Passes</span>
+</li>
+</ul>
+</div>
+<a class="clip-slant w-full text-center bg-zinc-800 hover:bg-zinc-700 text-white font-display text-xl tracking-wider py-3 uppercase font-bold transition-colors" href="#">
+            SELECT ELITE COMMAND
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PricingSection -->
+<!-- BEGIN: TransformationsSection -->
+<section class="py-24 bg-[#080808] border-b border-[#222222]" data-purpose="results-and-facility" id="transformations">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<!-- Section Intro -->
+<div class="mb-14">
+<span class="text-[#F04435] uppercase tracking-widest font-bold text-xs">VERIFIABLE OUTCOMES</span>
+<h2 class="text-4xl sm:text-6xl font-display uppercase tracking-tight text-white mt-2">
+          THE WORK <span class="text-[#FF941A]">SPEAKS.</span>
+</h2>
+</div>
+<!-- Before / After Case Study Banner -->
+<div class="bg-[#141414] border border-[#262626] p-8 lg:p-12 mb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 space-y-4">
+<div class="inline-block bg-[#F04435] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1">
+            CASE ARCHIVE #419 • HEAVY CADRE
+          </div>
+<h3 class="font-display text-4xl text-white uppercase tracking-wide">VIKRAM S. — 16 WEEKS PROTOCOL</h3>
+<p class="text-sm text-zinc-400 leading-relaxed">
+            "I spent four years spinning my wheels in commercial fitness clubs. Entering Corps removed all the fluff. With the periodized volume and ruthless accountability from Coach Vance, I broke every personal plateau within four months."
+          </p>
+<!-- Metrics Row -->
+<div class="grid grid-cols-3 gap-4 pt-4 border-t border-zinc-800">
+<div>
+<p class="font-display text-3xl text-[#FF941A]">+8.4 KG</p>
+<p class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">Lean Tissue</p>
+</div>
+<div>
+<p class="font-display text-3xl text-white">-6.2%</p>
+<p class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">Body Fat</p>
+</div>
+<div>
+<p class="font-display text-3xl text-[#F04435]">+65 KG</p>
+<p class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">Total Lift Total</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-cols-2 gap-3">
+<div class="relative overflow-hidden bg-zinc-900 border border-zinc-800">
+<img alt="Physique snapshot before starting Corps program" class="w-full h-64 object-cover filter grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ5jtQTLmrIgYRUx7NfTX5GZD8TuOwK2E_XsZrW9ZWsUpHzytYguZlz4tuKvWDU8rw-6JO7TmxRErI0Ry5VviGtGpVLpnGAQ4znpe0XjE9FaPBFx_VqqlgNKID6wCJr6UPfLMPhcIVc31gg01pOCHIzVgqyRQofnXRrAgMO9lPi3WPpYwDmWlnOh9mAVc7PUymtWx9ryR81-xX1eJYVwiBZUISeLXN0K6f7jS0a9aefTo7DT-Ch1Lc4A"/>
+<span class="absolute bottom-2 left-2 bg-black/80 text-[10px] uppercase font-bold px-2 py-0.5 text-zinc-400">BASELINE</span>
+</div>
+<div class="relative overflow-hidden bg-zinc-900 border border-[#F04435]/50">
+<img alt="Physique snapshot after 16 weeks of Corps program" class="w-full h-64 object-cover contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV32p16CpI8YegtROv9QpecbI1dfgBjdgaRpHjt-mCo-Vpb6SdpaXvIp57_ZbXRtSZuKoshWw0DQSEun_LnkyGl2B7Fad6XDHAVk5AIIG2S-fwTxlmu1XWkJdhhWuTOntugi75KMdHND1f7e37BITpEINjNQMVdAyDqBN4Hn_lmAS5rA5-2OJGk6SLavMbX5KDxJ67alQRYiPjHAdi6zalUYIcGd_9qc0I3eKcFXY8dVt_515iTOt58w"/>
+<span class="absolute bottom-2 left-2 bg-[#F04435] text-[10px] uppercase font-bold px-2 py-0.5 text-white">FORGED</span>
+</div>
+</div>
+</div>
+<!-- Facility Atmosphere Gallery -->
+<div class="mt-8">
+<h3 class="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-6">FORGED IN SHADOW &amp; STEEL — THE SANCTUM</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="overflow-hidden border border-zinc-800 h-48 bg-zinc-900">
+<img alt="Heavy dumbbell rack in the gym" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Ho78ZzOaSsZ_s1qVN18v4ykoh3m7tp1sxQeK0yBqApNVQy9_3RZoWfukkyalDASMmekiQS6C2Y1kTOm0kQO4Wk8OoJ0cDsDQN1L-JytaJEPv93Bs2WFIv1wFo6gJMUvJOfHJRUw7Xlxqg1CBg71Oaj1GNkL8nsthvtlKn1dSGs_OpMnGtoTfVUmVMIfxJEnJUa9bDdfOYyhjTRbH8KOMV87BgFENBJ6GS7OM3SzN0E_tD9pdhKDh-w"/>
+</div>
+<div class="overflow-hidden border border-zinc-800 h-48 bg-zinc-900">
+<img alt="Custom power squat cages" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd2XD2Z9QRAJ1V0ZsV7ZxqP5gOHEpEpARC93dONDw4cj4Jt0pFvASKmA3QiIcMEu60bMT4axGBe1DlFPoHoH-IRAt7Dg3ERJdA8UEa-DyOSND-cvO9aWkXy45pHAKO6ki_WP7yLR-lTYYrPrLX6hukqyyeL47AwBaGOyH9dK_Dj_H3RlhOjBen3yuAK5NpffTx96pU1-k3WJffyFQ2GGukWFpz4g3UV8ON_N8bo-mSminElp190yI_Gw"/>
+</div>
+<div class="overflow-hidden border border-zinc-800 h-48 bg-zinc-900">
+<img alt="Cold plunge recovery tubs" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJR7xXmcb-9fLCwHDgwibUCBlalkGe98JLXnaM0Wpv6tpwpfQeg9hcmJSYmDCYOJluPlqYEdWjMxKb7vwT1fhuw0YKtRy4hSkeOxP-hLkoH31bVkosiUHhNRNuS5JLfydgefZCPyJyaOhByVlOuv7eHdYvsutLf23JIhjvwASuI2uvHJksYn13en4wD0iicUqGpk68cs3zkm9DqQFln5y84tRJDvcG3D71tlCCUx6iTZH3bcf-sdN9UA"/>
+</div>
+<div class="overflow-hidden border border-zinc-800 h-48 bg-zinc-900">
+<img alt="Cedar wood infrared sauna suite" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABbbQIsYc9_XUAKQyGT6yLwWvJH5rOZc8fcCJDoMhoz0d-sRZqTwrBJ1XaQoE8Y1t9xE1pELFnuthrLer-AhYItfjtV04fCvOAlssGRJEY5tiM7GKQkFRNBzKNLUej0hjPzLvmBhZ78iszpDw3SWpQjLcfi2iYRUZiGG7VMHDAL60AxljPVS1lGuDXeA0oOaa5BSCMKPbDGhcUYFTXIUjfwXKBBZAySrquWxLPS6Q-xOcDWyixiNF2Aw"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TransformationsSection -->
+<!-- BEGIN: LocationSection -->
+<section class="py-20 bg-[#111111] border-b border-[#222222]" data-purpose="sanctum-location" id="location">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+<div>
+<span class="text-[#F04435] uppercase tracking-widest font-bold text-xs">PHYSICAL HEADQUARTERS</span>
+<h2 class="text-3xl font-display uppercase tracking-wider text-white mt-2">OPERATIONAL SANCTUM</h2>
+<p class="text-xs text-zinc-400 mt-2">
+            42 Ironworks Blvd, Sector 7 Industrial District, Metro Hub.<br/>
+            Biometric Gate 02 Entry.
+          </p>
+</div>
+<div class="border-y md:border-y-0 md:border-x border-zinc-800 py-4 md:py-0 md:px-8">
+<span class="text-[#FF941A] uppercase tracking-widest font-bold text-xs">DOORS &amp; ACCESS</span>
+<h3 class="text-xl font-display uppercase tracking-wider text-white mt-1">24/7/365 CONTINUOUS ACCESS</h3>
+<p class="text-xs text-zinc-400 mt-1">
+            General Floor: 05:00 — 23:00<br/>
+            Pro &amp; Command Cadre: Unbroken 24-Hour Access
+          </p>
+</div>
+<div>
+<span class="text-zinc-400 uppercase tracking-widest font-bold text-xs">DIRECT LINE</span>
+<p class="text-2xl font-display text-white mt-1">+91 (080) 4920-CORPS</p>
+<a class="text-xs text-[#F04435] uppercase font-bold hover:underline" href="mailto:cadre@corpsgym.com">
+            cadre@corpsgym.com
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: LocationSection -->
+<!-- BEGIN: FinalConversionBanner -->
+<section class="py-20 bg-gradient-to-r from-[#99140C] via-[#DC2626] to-[#99140C] text-white" data-purpose="conversion-call-to-action">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12 text-center">
+<h2 class="text-5xl sm:text-7xl font-display uppercase tracking-tight text-white leading-none">
+        STOP WAITING. START BUILDING.
+      </h2>
+<p class="mt-4 text-white/90 text-sm sm:text-base max-w-xl mx-auto font-medium">
+        Every rep you skip is another day spent ordinary. Take the step, commit to the standard, and enter the Corps sanctum today.
+      </p>
+<div class="mt-8 flex flex-wrap justify-center items-center gap-4">
+<a class="clip-slant bg-white hover:bg-zinc-200 text-black font-display text-2xl tracking-wider px-10 py-3.5 uppercase font-bold shadow-2xl transition-all" href="#pricing">
+          JOIN CORPS NOW
+        </a>
+<a class="clip-slant bg-black hover:bg-zinc-900 text-white border border-white/30 font-display text-2xl tracking-wider px-8 py-3.5 uppercase font-bold transition-all" href="#about">
+          CLAIM 1-DAY PASS
+        </a>
+</div>
+</div>
+</section>
+<!-- END: FinalConversionBanner -->
+<!-- BEGIN: SiteFooter -->
+<footer class="bg-[#080808] text-zinc-400 py-16 border-t border-[#222222]" data-purpose="main-footer">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+<!-- Brand Info -->
+<div class="md:col-span-1">
+<div class="flex items-center gap-1 mb-3">
+<span class="font-display text-3xl tracking-wider text-[#F04435]">COR</span>
+<span class="font-display text-3xl tracking-wider text-white">PS.</span>
+</div>
+<p class="text-xs text-zinc-500 leading-relaxed">
+            The premier high-output hypertrophy and tactical powerlifting facility. Dedicated to discipline, progressive overload, and uncompromising human physical performance.
+          </p>
+<p class="text-xs font-bold text-zinc-400 mt-4 tracking-widest uppercase">
+            STRENGTH • DISCIPLINE • SOLIDARITY
+          </p>
+</div>
+<!-- Links: Protocols -->
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">PROTOCOLS</h4>
+<ul class="space-y-2 text-xs">
+<li><a class="hover:text-white transition-colors" href="#programs">Heavy Hypertrophy</a></li>
+<li><a class="hover:text-white transition-colors" href="#programs">Tactical Powerlifting</a></li>
+<li><a class="hover:text-white transition-colors" href="#programs">Metabolic Warfare</a></li>
+<li><a class="hover:text-white transition-colors" href="#programs">1-on-1 Master Cadre</a></li>
+<li><a class="hover:text-white transition-colors" href="#about">Thermal Bio-Recovery</a></li>
+</ul>
+</div>
+<!-- Links: Sanctum -->
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">SANCTUM</h4>
+<ul class="space-y-2 text-xs">
+<li><a class="hover:text-white transition-colors" href="#about">The Corps Doctrine</a></li>
+<li><a class="hover:text-white transition-colors" href="#trainers">Command Staff</a></li>
+<li><a class="hover:text-white transition-colors" href="#pricing">Membership Tiers</a></li>
+<li><a class="hover:text-white transition-colors" href="#transformations">Athlete Results</a></li>
+<li><a class="hover:text-white transition-colors" href="#location">Facility Tour</a></li>
+</ul>
+</div>
+<!-- Links: Legal & Standards -->
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">GOVERNANCE</h4>
+<ul class="space-y-2 text-xs">
+<li><a class="hover:text-white transition-colors" href="#">Sanctum Conduct Rules</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Liability &amp; Safety Release</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Privacy Charter</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Member Terms of Initiation</a></li>
+</ul>
+<!-- Badge attribution matching design element in corner of original hero -->
+<div class="mt-6 inline-flex items-center gap-2 bg-[#161616] border border-[#2a2a2a] px-3 py-1.5 rounded-full text-[11px] text-zinc-400">
+<span>Carefully crafted at</span>
+<span class="bg-white text-black font-bold px-1.5 py-0.5 rounded text-[10px]">Slab!</span>
+</div>
+</div>
+</div>
+<!-- Bottom Copyright Strip -->
+<div class="border-t border-zinc-900 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-zinc-600 gap-4">
+<p>© 2025 CORPS ATHLETIC SANCTUM. ALL RIGHTS RESERVED.</p>
+<p class="tracking-widest uppercase">DISCIPLINE OVER COMFORT.</p>
+</div>
+</div>
+</footer>
+<!-- END: SiteFooter -->
+</body></html>
